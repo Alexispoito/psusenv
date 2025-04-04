@@ -5,10 +5,8 @@ from .models import College, Program, Organization, Student, OrgMember
 admin.site.register(College)
 admin.site.register(Program)
 admin.site.register(Organization)
-admin.site.register(Student)
-admin.site.register(OrgMember)
 
-"""@admin.register(Student)
+@admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ("student_id", "lastname", "firstname", "middlename", "program")
     search_fields = ("lastname", "firstname")
@@ -23,4 +21,4 @@ class OrgMemberAdmin(admin.ModelAdmin):
             member = Student.objects.get(id=obj.student_id)
             return member.program
         except Student.DoesNotExist:
-            return None"""
+            return None

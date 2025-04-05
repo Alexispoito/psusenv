@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% load static %} {% block content %} 
 <div class="content">
   <div class="container-fluid">
-    <h4 class="page-title">Home</h4>
+    <h4 class="page-title">Organization Members</h4>
      <div class="row">
       <div class="col-md-12">
         <div class="card">
          <div class="card-header">
-           <div class="card-title">List of Org members</div> 
-           <div class="card-category">Page Subtitle</div>
+           <div class="card-title">List of Organization Members</div> 
+           <div class="card-category">View and manage members of various student organizations</div>
         </div>
         </br> 
         <div class="col-md-12 row">
@@ -24,7 +24,7 @@
         </form>
         </div>
         <div class="col-md-6">
-        <div class="pull-right"> <a href="{% url 'orgmember-add' %}" class="btn btn-success btn-rounded">Add Organization</a></div>
+        <div class="pull-right"> <a href="{% url 'orgmember-add' %}" class="btn btn-success btn-rounded">Add Org. Member</a></div>
         </div>
         </div>
         <div class="card-body">

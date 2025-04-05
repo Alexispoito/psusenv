@@ -167,43 +167,43 @@
 						</div>
 					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<a href="index.html">
-								<i class="la la-dashboard"></i>
-								<p>Dashboard</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{% url 'organization-list' %}">
-								<i class="la la-table"></i>
-								<p>Organization</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{% url 'orgmember-list' %}">
-								<i class="la la-keyboard-o"></i>
-								<p>Org. Members</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{% url 'student-list' %}">
-								<i class="la la-th"></i>
-								<p>Student</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{% url 'college-list'%}">
-								<i class="la la-bell"></i>
-								<p>College</p>
-							</a>
-						</li>
-						<li class="nav-item active">
-							<a href="{% url 'program-list' %}">
-								<i class="la la-font"></i>
-								<p>Program</p>
-							</a>
-						</li>
-					</ul>
+                        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                            <a href="{% url 'home' %}">
+                                <i class="la la-dashboard"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/organization_list' %}active{% endif %}">
+                            <a href="{% url 'organization-list' %}">
+                                <i class="la la-table"></i>
+                                <p>Organization</p>
+                            </a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/orgmember_list/' %}active{% endif %}">
+                            <a href="{% url 'orgmember-list' %}">
+                                <i class="la la-keyboard-o"></i>
+                                <p>Org. Members</p>
+                            </a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/student_list/' %}active{% endif %}">
+                            <a href="{% url 'student-list' %}">
+                                <i class="la la-th"></i>
+                                <p>Student</p>
+                            </a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/college_list/' %}active{% endif %}">
+                            <a href="{% url 'college-list' %}">
+                                <i class="la la-bell"></i>
+                                <p>College</p>
+                            </a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/program_list/' %}active{% endif %}">
+                            <a href="{% url 'program-list' %}">
+                                <i class="la la-font"></i>
+                                <p>Program</p>
+                            </a>
+                        </li>
+                    </ul>
 				</div>
 			</div>
 			<div class="main-panel">

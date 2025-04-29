@@ -5,12 +5,28 @@ from studentorg.views import OrgMemberList, OrgMemberCreateView, OrgMemberUpdate
 from studentorg.views import StudentList, StudentCreateView, StudentUpdateView, StudentDeleteView
 from studentorg.views import CollegeList, CollegeCreateView, CollegeUpdateView, CollegeDeleteView
 from studentorg.views import ProgramList, ProgramCreateView, ProgramUpdateView, ProgramDeleteView
+from studentorg.views import HomePageView, ChartView, orgMemDoughnutChart,studentCountEveryCollege,radarStudenCountEveryCollege,programPolarchart, htmlLegendsChart
+
 from studentorg import views
 from django.contrib.auth import views as auth_views
+
+from django.db import connection
+from django.http import JsonResponse
+from django.db.models.functions import ExtractMonth
+
+from django.db.models import Count
+from datetime import datetime
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.HomePageView.as_view(), name='home'),
+
+    path('dashboard_chart', ChartView.as_view(), name='dashboard-chart'),
+    path('doughnut-chart/', orgMemDoughnutChart, name='doughnut-chart'),
+    path('doughnut-chart-college/', studentCountEveryCollege, name='doughnut-chart-college'),
+    path('radar-chart-college/', radarStudenCountEveryCollege, name='radar-chart-college'),
+    path('program-polar-chart/', programPolarchart, name='program-polar-chart'),
+    path('html-legends-chart/', htmlLegendsChart, name='html-legends-chart'),
 
     path('organization_list', OrganizationList.as_view(), name='organization-list'),
     path('organization_list/add', OrganizationCreateView.as_view(), name='organization-add'),

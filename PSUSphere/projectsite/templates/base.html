@@ -168,7 +168,7 @@
 					</div>
 					<ul class="nav">
                         <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                            <a href="{% url 'home' %}">
+                            <a href="{% url 'dashboard-chart' %}">
                                 <i class="la la-dashboard"></i>
                                 <p>Dashboard</p>
                             </a>
@@ -247,4 +247,27 @@
 <script src="{% static 'js/plugin/chart-circle/circles.min.js' %}"></script>
 <script src="{% static 'js/plugin/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
 <script src="{% static 'js/ready.min.js' %}"></script>
+
+
+   <!--   Core JS Files   -->
+   <script src="{% static 'js/core/jquery.3.2.1.min.js' %}"></script>
+   <script src="{% static 'js/core/popper.min.js' %}"></script>
+   <script src="{% static 'js/core/bootstrap.min.js' %}"></script>
+
+   <!-- jQuery UI -->
+   <script src="{% static 'js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js' %}"></script>
+   <script src="{% static 'js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js' %}"></script>
+   <script src="{% static 'js/plugin/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
+   <script src="{% static 'js/plugin/chart.js/chart.min.js' %}"></script>
+   <script src="{% static 'js/plugin/jquery.sparkline/jquery.sparkline.min.js' %}"></script>
+   <script src="{% static 'js/plugin/chart-circle/circles.min.js' %}"></script>
+   <script src="{% static 'js/plugin/datatables/datatables.min.js' %}"></script>
+   <script src="{% static 'js/plugin/bootstrap-notify/bootstrap-notify.min.js' %}"></script>
+   <script src="{% static 'js/plugin/jqvmap/jquery.vmap.min.js' %}"></script>
+   <script src="{% static 'js/plugin/jqvmap/maps/jquery.vmap.world.js' %}"></script>
+   <script src="{% static 'js/plugin/sweetalert/sweetalert.min.js' %}"></script>
+   <script src="{% static 'js/atlantis.min.js' %}"></script>
+{% block chart %}
+
+{% endblock %}
 </html>
